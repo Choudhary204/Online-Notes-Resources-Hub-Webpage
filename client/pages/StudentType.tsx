@@ -34,9 +34,8 @@ export default function StudentType() {
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* School Student Card */}
-                <button
-                  onClick={() => handleSelect("school")}
-                  className={`relative group rounded-2xl p-8 md:p-12 transition-all duration-300 transform hover:scale-105 cursor-pointer text-left ${
+                <div
+                  className={`relative group rounded-2xl p-8 md:p-12 transition-all duration-300 transform hover:scale-105 text-left ${
                     selectedType === "school"
                       ? "bg-gradient-to-br from-primary to-primary/80 text-primary-foreground shadow-xl"
                       : "bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/20 hover:border-primary/50 text-foreground"
@@ -68,6 +67,7 @@ export default function StudentType() {
                     </ul>
 
                     <button
+                      onClick={() => handleSelect("school")}
                       className={`w-full py-3 rounded-lg font-semibold transition-colors ${
                         selectedType === "school"
                           ? "bg-primary-foreground text-primary hover:bg-opacity-90"
@@ -77,12 +77,11 @@ export default function StudentType() {
                       Continue as School Student
                     </button>
                   </div>
-                </button>
+                </div>
 
                 {/* College Student Card */}
-                <button
-                  onClick={() => handleSelect("college")}
-                  className={`relative group rounded-2xl p-8 md:p-12 transition-all duration-300 transform hover:scale-105 cursor-pointer text-left ${
+                <div
+                  className={`relative group rounded-2xl p-8 md:p-12 transition-all duration-300 transform hover:scale-105 text-left ${
                     selectedType === "college"
                       ? "bg-gradient-to-br from-accent to-accent/80 text-accent-foreground shadow-xl"
                       : "bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/20 hover:border-accent/50 text-foreground"
@@ -114,6 +113,7 @@ export default function StudentType() {
                     </ul>
 
                     <button
+                      onClick={() => handleSelect("college")}
                       className={`w-full py-3 rounded-lg font-semibold transition-colors ${
                         selectedType === "college"
                           ? "bg-accent-foreground text-accent hover:bg-opacity-90"
@@ -123,7 +123,7 @@ export default function StudentType() {
                       Continue as College Student
                     </button>
                   </div>
-                </button>
+                </div>
               </div>
             </div>
 
