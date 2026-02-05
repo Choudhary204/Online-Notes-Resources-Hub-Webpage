@@ -46,9 +46,8 @@ export default function NotesType() {
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Short Notes Card */}
-                <button
-                  onClick={() => handleSelect("short")}
-                  className={`relative group rounded-2xl p-8 md:p-12 transition-all duration-300 transform hover:scale-105 cursor-pointer text-left ${
+                <div
+                  className={`relative group rounded-2xl p-8 md:p-12 transition-all duration-300 transform hover:scale-105 text-left ${
                     selectedType === "short"
                       ? "bg-gradient-to-br from-secondary to-secondary/80 text-secondary-foreground shadow-xl"
                       : "bg-gradient-to-br from-secondary/10 to-secondary/5 border-2 border-secondary/20 hover:border-secondary/50 text-foreground"
@@ -104,6 +103,7 @@ export default function NotesType() {
                     </ul>
 
                     <button
+                      onClick={() => handleSelect("short")}
                       className={`w-full py-3 rounded-lg font-semibold transition-colors ${
                         selectedType === "short"
                           ? "bg-secondary-foreground text-secondary hover:bg-opacity-90"
@@ -113,12 +113,11 @@ export default function NotesType() {
                       View Short Notes
                     </button>
                   </div>
-                </button>
+                </div>
 
                 {/* Long Notes Card */}
-                <button
-                  onClick={() => handleSelect("long")}
-                  className={`relative group rounded-2xl p-8 md:p-12 transition-all duration-300 transform hover:scale-105 cursor-pointer text-left ${
+                <div
+                  className={`relative group rounded-2xl p-8 md:p-12 transition-all duration-300 transform hover:scale-105 text-left ${
                     selectedType === "long"
                       ? "bg-gradient-to-br from-primary to-primary/80 text-primary-foreground shadow-xl"
                       : "bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/20 hover:border-primary/50 text-foreground"
@@ -174,6 +173,7 @@ export default function NotesType() {
                     </ul>
 
                     <button
+                      onClick={() => handleSelect("long")}
                       className={`w-full py-3 rounded-lg font-semibold transition-colors ${
                         selectedType === "long"
                           ? "bg-primary-foreground text-primary hover:bg-opacity-90"
@@ -183,7 +183,7 @@ export default function NotesType() {
                       View Long Notes
                     </button>
                   </div>
-                </button>
+                </div>
               </div>
 
               {/* Summary */}
