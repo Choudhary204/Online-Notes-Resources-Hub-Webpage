@@ -12,14 +12,38 @@ export default function Notes() {
   // Sample notes data
   const sampleNotes = {
     short: [
-      { id: 1, title: "Chapter Summary", excerpt: "Key concepts and definitions..." },
-      { id: 2, title: "Quick Facts", excerpt: "Important points to remember..." },
-      { id: 3, title: "Formulas & Rules", excerpt: "Essential formulas and rules..." },
+      {
+        id: 1,
+        title: "Chapter Summary",
+        excerpt: "Key concepts and definitions...",
+      },
+      {
+        id: 2,
+        title: "Quick Facts",
+        excerpt: "Important points to remember...",
+      },
+      {
+        id: 3,
+        title: "Formulas & Rules",
+        excerpt: "Essential formulas and rules...",
+      },
     ],
     long: [
-      { id: 1, title: "Complete Chapter Notes", excerpt: "Detailed explanation of all topics..." },
-      { id: 2, title: "Advanced Concepts", excerpt: "Deep dive into complex topics..." },
-      { id: 3, title: "Practice Problems", excerpt: "Solved examples and practice questions..." },
+      {
+        id: 1,
+        title: "Complete Chapter Notes",
+        excerpt: "Detailed explanation of all topics...",
+      },
+      {
+        id: 2,
+        title: "Advanced Concepts",
+        excerpt: "Deep dive into complex topics...",
+      },
+      {
+        id: 3,
+        title: "Practice Problems",
+        excerpt: "Solved examples and practice questions...",
+      },
     ],
   };
 
@@ -35,10 +59,21 @@ export default function Notes() {
             {/* Breadcrumb */}
             <div className="mb-12">
               <div className="text-sm text-muted-foreground mb-6">
-                <span className="font-semibold text-foreground">{studentType}</span> •{" "}
-                <span className="font-semibold text-foreground">{selectedClass}</span> •{" "}
-                <span className="font-semibold text-foreground">{selectedSubject}</span> •{" "}
-                <span className="text-primary font-semibold">{notesType} notes</span>
+                <span className="font-semibold text-foreground">
+                  {studentType}
+                </span>{" "}
+                •{" "}
+                <span className="font-semibold text-foreground">
+                  {selectedClass}
+                </span>{" "}
+                •{" "}
+                <span className="font-semibold text-foreground">
+                  {selectedSubject}
+                </span>{" "}
+                •{" "}
+                <span className="text-primary font-semibold">
+                  {notesType} notes
+                </span>
               </div>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -78,7 +113,9 @@ export default function Notes() {
                   <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {note.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4">{note.excerpt}</p>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {note.excerpt}
+                  </p>
                   <button className="text-primary font-semibold text-sm hover:gap-2 transition-all flex items-center gap-1">
                     View Notes <span>→</span>
                   </button>
@@ -88,19 +125,26 @@ export default function Notes() {
 
             {/* Info Box */}
             <div className="bg-accent/5 border border-accent/20 rounded-xl p-8">
-              <h3 className="font-semibold text-foreground mb-3">📚 About These Notes</h3>
+              <h3 className="font-semibold text-foreground mb-3">
+                📚 About These Notes
+              </h3>
               <p className="text-muted-foreground text-sm mb-4">
-                These {notesType} notes for {selectedSubject} have been compiled by top-performing students and verified by educators. They cover the entire syllabus as per your {selectedClass} curriculum.
+                These {notesType} notes for {selectedSubject} have been compiled
+                by top-performing students and verified by educators. They cover
+                the entire syllabus as per your {selectedClass} curriculum.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex items-center gap-2">
-                  <span className="text-primary font-bold">✓</span> Verified and accurate
+                  <span className="text-primary font-bold">✓</span> Verified and
+                  accurate
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-primary font-bold">✓</span> Updated regularly
+                  <span className="text-primary font-bold">✓</span> Updated
+                  regularly
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="text-primary font-bold">✓</span> Exam-focused content
+                  <span className="text-primary font-bold">✓</span> Exam-focused
+                  content
                 </li>
               </ul>
             </div>

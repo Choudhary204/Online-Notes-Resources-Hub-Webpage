@@ -5,7 +5,9 @@ import { useState } from "react";
 
 export default function StudentType() {
   const navigate = useNavigate();
-  const [selectedType, setSelectedType] = useState<"school" | "college" | null>(null);
+  const [selectedType, setSelectedType] = useState<"school" | "college" | null>(
+    null,
+  );
 
   const handleSelect = (type: "school" | "college") => {
     setSelectedType(type);
@@ -26,7 +28,8 @@ export default function StudentType() {
                 What's Your Student Status?
               </h1>
               <p className="text-lg text-muted-foreground">
-                Select your category to access notes tailored specifically for your curriculum
+                Select your category to access notes tailored specifically for
+                your curriculum
               </p>
             </div>
 
@@ -46,23 +49,29 @@ export default function StudentType() {
                   </div>
 
                   <div className="relative z-10">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-4">School Student</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                      School Student
+                    </h2>
                     <p className="text-sm md:text-base mb-6 opacity-90">
                       Class 9-12 • CBSE/ICSE/State Boards
                     </p>
 
                     <ul className="space-y-3 mb-8 text-sm">
                       <li className="flex items-center gap-2">
-                        <span className="text-primary font-bold">✓</span> Complete syllabus coverage
+                        <span className="text-primary font-bold">✓</span>{" "}
+                        Complete syllabus coverage
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="text-primary font-bold">✓</span> Board exam preparation
+                        <span className="text-primary font-bold">✓</span> Board
+                        exam preparation
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="text-primary font-bold">✓</span> Easy-to-understand language
+                        <span className="text-primary font-bold">✓</span>{" "}
+                        Easy-to-understand language
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="text-primary font-bold">✓</span> Quick revision notes
+                        <span className="text-primary font-bold">✓</span> Quick
+                        revision notes
                       </li>
                     </ul>
 
@@ -92,23 +101,29 @@ export default function StudentType() {
                   </div>
 
                   <div className="relative z-10">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-4">College Student</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                      College Student
+                    </h2>
                     <p className="text-sm md:text-base mb-6 opacity-90">
                       Graduation & Post-Graduation
                     </p>
 
                     <ul className="space-y-3 mb-8 text-sm">
                       <li className="flex items-center gap-2">
-                        <span className="font-bold">✓</span> Advanced course materials
+                        <span className="font-bold">✓</span> Advanced course
+                        materials
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="font-bold">✓</span> University-focused content
+                        <span className="font-bold">✓</span> University-focused
+                        content
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="font-bold">✓</span> In-depth explanations
+                        <span className="font-bold">✓</span> In-depth
+                        explanations
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="font-bold">✓</span> Research & reference materials
+                        <span className="font-bold">✓</span> Research &
+                        reference materials
                       </li>
                     </ul>
 
@@ -129,9 +144,14 @@ export default function StudentType() {
 
             {/* Info Section */}
             <div className="max-w-3xl mx-auto mt-16 p-6 md:p-8 bg-slate-50 rounded-xl border border-border">
-              <h3 className="font-semibold text-foreground mb-3">Why does this matter?</h3>
+              <h3 className="font-semibold text-foreground mb-3">
+                Why does this matter?
+              </h3>
               <p className="text-muted-foreground text-sm">
-                We organize notes by your educational level to ensure you get the most relevant and appropriate study materials. Your selection helps us provide accurate content that matches your curriculum and difficulty level.
+                We organize notes by your educational level to ensure you get
+                the most relevant and appropriate study materials. Your
+                selection helps us provide accurate content that matches your
+                curriculum and difficulty level.
               </p>
             </div>
           </div>

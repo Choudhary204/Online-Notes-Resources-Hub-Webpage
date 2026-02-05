@@ -9,12 +9,14 @@ export default function NotesType() {
   const studentType = searchParams.get("type") || "school";
   const selectedClass = searchParams.get("class") || "";
   const selectedSubject = searchParams.get("subject") || "";
-  const [selectedType, setSelectedType] = useState<"short" | "long" | null>(null);
+  const [selectedType, setSelectedType] = useState<"short" | "long" | null>(
+    null,
+  );
 
   const handleSelect = (type: "short" | "long") => {
     setSelectedType(type);
     navigate(
-      `/notes?type=${studentType}&class=${encodeURIComponent(selectedClass)}&subject=${encodeURIComponent(selectedSubject)}&notesType=${type}`
+      `/notes?type=${studentType}&class=${encodeURIComponent(selectedClass)}&subject=${encodeURIComponent(selectedSubject)}&notesType=${type}`,
     );
   };
 
@@ -38,7 +40,9 @@ export default function NotesType() {
               </h1>
               <p className="text-lg text-muted-foreground">
                 Choose between quick summaries or comprehensive notes for{" "}
-                <span className="font-semibold text-foreground">{selectedSubject}</span>
+                <span className="font-semibold text-foreground">
+                  {selectedSubject}
+                </span>
               </p>
             </div>
 
@@ -58,7 +62,9 @@ export default function NotesType() {
                   </div>
 
                   <div className="relative z-10">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-4">Short Notes</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                      Short Notes
+                    </h2>
                     <p className="text-sm md:text-base mb-8 opacity-90">
                       Perfect for last-minute revision and quick reference
                     </p>
@@ -67,7 +73,9 @@ export default function NotesType() {
                       <li className="flex items-start gap-3">
                         <span className="text-lg font-bold mt-1">✓</span>
                         <div>
-                          <p className="font-semibold text-sm mb-1">Quick Summaries</p>
+                          <p className="font-semibold text-sm mb-1">
+                            Quick Summaries
+                          </p>
                           <p className="text-xs opacity-75">
                             Key points condensed for fast revision
                           </p>
@@ -76,7 +84,9 @@ export default function NotesType() {
                       <li className="flex items-start gap-3">
                         <span className="text-lg font-bold mt-1">✓</span>
                         <div>
-                          <p className="font-semibold text-sm mb-1">Bullet Points</p>
+                          <p className="font-semibold text-sm mb-1">
+                            Bullet Points
+                          </p>
                           <p className="text-xs opacity-75">
                             Important facts in easy-to-scan format
                           </p>
@@ -85,7 +95,9 @@ export default function NotesType() {
                       <li className="flex items-start gap-3">
                         <span className="text-lg font-bold mt-1">✓</span>
                         <div>
-                          <p className="font-semibold text-sm mb-1">Time Efficient</p>
+                          <p className="font-semibold text-sm mb-1">
+                            Time Efficient
+                          </p>
                           <p className="text-xs opacity-75">
                             Learn complete topics in 10-15 minutes
                           </p>
@@ -94,7 +106,9 @@ export default function NotesType() {
                       <li className="flex items-start gap-3">
                         <span className="text-lg font-bold mt-1">✓</span>
                         <div>
-                          <p className="font-semibold text-sm mb-1">Memory Aids</p>
+                          <p className="font-semibold text-sm mb-1">
+                            Memory Aids
+                          </p>
                           <p className="text-xs opacity-75">
                             Mnemonics and tricks for better retention
                           </p>
@@ -128,7 +142,9 @@ export default function NotesType() {
                   </div>
 
                   <div className="relative z-10">
-                    <h2 className="text-2xl md:text-3xl font-bold mb-4">Long Notes</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                      Long Notes
+                    </h2>
                     <p className="text-sm md:text-base mb-8 opacity-90">
                       Comprehensive coverage for complete understanding
                     </p>
@@ -137,7 +153,9 @@ export default function NotesType() {
                       <li className="flex items-start gap-3">
                         <span className="text-lg font-bold mt-1">✓</span>
                         <div>
-                          <p className="font-semibold text-sm mb-1">Deep Explanations</p>
+                          <p className="font-semibold text-sm mb-1">
+                            Deep Explanations
+                          </p>
                           <p className="text-xs opacity-75">
                             In-depth analysis of every concept
                           </p>
@@ -146,7 +164,9 @@ export default function NotesType() {
                       <li className="flex items-start gap-3">
                         <span className="text-lg font-bold mt-1">✓</span>
                         <div>
-                          <p className="font-semibold text-sm mb-1">Examples & Case Studies</p>
+                          <p className="font-semibold text-sm mb-1">
+                            Examples & Case Studies
+                          </p>
                           <p className="text-xs opacity-75">
                             Real-world applications of concepts
                           </p>
@@ -155,7 +175,9 @@ export default function NotesType() {
                       <li className="flex items-start gap-3">
                         <span className="text-lg font-bold mt-1">✓</span>
                         <div>
-                          <p className="font-semibold text-sm mb-1">Diagrams & Illustrations</p>
+                          <p className="font-semibold text-sm mb-1">
+                            Diagrams & Illustrations
+                          </p>
                           <p className="text-xs opacity-75">
                             Visual representations for clarity
                           </p>
@@ -164,7 +186,9 @@ export default function NotesType() {
                       <li className="flex items-start gap-3">
                         <span className="text-lg font-bold mt-1">✓</span>
                         <div>
-                          <p className="font-semibold text-sm mb-1">Practice Questions</p>
+                          <p className="font-semibold text-sm mb-1">
+                            Practice Questions
+                          </p>
                           <p className="text-xs opacity-75">
                             Assessment and preparation for exams
                           </p>
@@ -188,14 +212,19 @@ export default function NotesType() {
 
               {/* Summary */}
               <div className="mt-12 p-8 bg-gradient-to-r from-primary/5 to-accent/5 rounded-xl border border-border">
-                <h3 className="font-semibold text-foreground mb-3">Your Selection</h3>
+                <h3 className="font-semibold text-foreground mb-3">
+                  Your Selection
+                </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  📚 <span className="font-semibold">Subject:</span> {selectedSubject} |
-                  <span className="font-semibold ml-3">Level:</span> {selectedClass}
+                  📚 <span className="font-semibold">Subject:</span>{" "}
+                  {selectedSubject} |
+                  <span className="font-semibold ml-3">Level:</span>{" "}
+                  {selectedClass}
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  💡 Tip: You can access both short and long notes for any subject. Start with short notes for quick
-                  review and dive into long notes for deeper learning.
+                  💡 Tip: You can access both short and long notes for any
+                  subject. Start with short notes for quick review and dive into
+                  long notes for deeper learning.
                 </p>
               </div>
             </div>

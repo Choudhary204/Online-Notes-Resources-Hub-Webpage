@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-gradient-to-b from-slate-50 to-slate-100 border-t border-border">
+    <footer
+      id="contact"
+      className="bg-gradient-to-b from-slate-50 to-slate-100 border-t border-border"
+    >
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
         {/* CTA Section */}
         <div className="mb-12 text-center">
@@ -10,7 +13,8 @@ export default function Footer() {
             Ready to ace your exams?
           </h2>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-            Join thousands of students who are already using NotesHub to find comprehensive notes.
+            Join thousands of students who are already using NotesHub to find
+            comprehensive notes.
           </p>
           <Link
             to="/student-type"
@@ -30,7 +34,8 @@ export default function Footer() {
               NotesHub
             </h3>
             <p className="text-sm text-muted-foreground">
-              Your comprehensive resource hub for academic notes. Making studying easier for everyone.
+              Your comprehensive resource hub for academic notes. Making
+              studying easier for everyone.
             </p>
           </div>
           <div>
@@ -42,7 +47,10 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/student-type" className="hover:text-primary transition-colors">
+                <Link
+                  to="/student-type"
+                  className="hover:text-primary transition-colors"
+                >
                   Browse Notes
                 </Link>
               </li>
@@ -57,7 +65,10 @@ export default function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="mailto:hello@noteshub.com" className="hover:text-primary transition-colors">
+                <a
+                  href="mailto:hello@noteshub.com"
+                  className="hover:text-primary transition-colors"
+                >
                   hello@noteshub.com
                 </a>
               </li>

@@ -16,7 +16,9 @@ export default function Index() {
                 Find Perfect Notes for Your Exams
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                Stop struggling to find study materials. Access comprehensive notes compiled by students like you. Whether you're in school or college, we've got you covered.
+                Stop struggling to find study materials. Access comprehensive
+                notes compiled by students like you. Whether you're in school or
+                college, we've got you covered.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -33,16 +35,28 @@ export default function Index() {
               {/* Hero Stats */}
               <div className="grid grid-cols-3 gap-4 md:gap-8 mt-12 md:mt-16">
                 <div>
-                  <p className="text-2xl md:text-3xl font-bold text-primary">5K+</p>
-                  <p className="text-sm md:text-base text-muted-foreground mt-2">Active Users</p>
+                  <p className="text-2xl md:text-3xl font-bold text-primary">
+                    5K+
+                  </p>
+                  <p className="text-sm md:text-base text-muted-foreground mt-2">
+                    Active Users
+                  </p>
                 </div>
                 <div>
-                  <p className="text-2xl md:text-3xl font-bold text-accent">500+</p>
-                  <p className="text-sm md:text-base text-muted-foreground mt-2">Subjects Covered</p>
+                  <p className="text-2xl md:text-3xl font-bold text-accent">
+                    500+
+                  </p>
+                  <p className="text-sm md:text-base text-muted-foreground mt-2">
+                    Subjects Covered
+                  </p>
                 </div>
                 <div>
-                  <p className="text-2xl md:text-3xl font-bold text-secondary">10K+</p>
-                  <p className="text-sm md:text-base text-muted-foreground mt-2">Notes Available</p>
+                  <p className="text-2xl md:text-3xl font-bold text-secondary">
+                    10K+
+                  </p>
+                  <p className="text-sm md:text-base text-muted-foreground mt-2">
+                    Notes Available
+                  </p>
                 </div>
               </div>
             </div>
@@ -90,7 +104,9 @@ export default function Index() {
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-2xl mb-4">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                    {item.title}
+                  </h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
                   {idx < 3 && (
                     <div className="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center">
@@ -142,8 +158,12 @@ export default function Index() {
                     <div className="w-3 h-3 rounded-full bg-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground text-sm">{feature.desc}</p>
+                    <h3 className="font-semibold text-foreground mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {feature.desc}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -160,37 +180,50 @@ export default function Index() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 md:p-12 border border-primary/20">
-                <h3 className="text-2xl font-bold text-foreground mb-4">School Students</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  School Students
+                </h3>
                 <p className="text-muted-foreground mb-6">
-                  From 9th to 12th grade, find notes for CBSE, ICSE, and state boards. Get complete subject coverage for all your examinations.
+                  From 9th to 12th grade, find notes for CBSE, ICSE, and state
+                  boards. Get complete subject coverage for all your
+                  examinations.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2 text-sm">
-                    <span className="text-primary font-bold">✓</span> All major subjects
+                    <span className="text-primary font-bold">✓</span> All major
+                    subjects
                   </li>
                   <li className="flex items-center gap-2 text-sm">
-                    <span className="text-primary font-bold">✓</span> Board exam focused
+                    <span className="text-primary font-bold">✓</span> Board exam
+                    focused
                   </li>
                   <li className="flex items-center gap-2 text-sm">
-                    <span className="text-primary font-bold">✓</span> Easy language
+                    <span className="text-primary font-bold">✓</span> Easy
+                    language
                   </li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-8 md:p-12 border border-accent/20">
-                <h3 className="text-2xl font-bold text-foreground mb-4">College Students</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  College Students
+                </h3>
                 <p className="text-muted-foreground mb-6">
-                  For graduation and post-graduation courses across all streams. In-depth notes tailored to university curriculum.
+                  For graduation and post-graduation courses across all streams.
+                  In-depth notes tailored to university curriculum.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2 text-sm">
-                    <span className="text-accent font-bold">✓</span> Advanced topics
+                    <span className="text-accent font-bold">✓</span> Advanced
+                    topics
                   </li>
                   <li className="flex items-center gap-2 text-sm">
-                    <span className="text-accent font-bold">✓</span> Detailed explanations
+                    <span className="text-accent font-bold">✓</span> Detailed
+                    explanations
                   </li>
                   <li className="flex items-center gap-2 text-sm">
-                    <span className="text-accent font-bold">✓</span> Research-backed
+                    <span className="text-accent font-bold">✓</span>{" "}
+                    Research-backed
                   </li>
                 </ul>
               </div>
@@ -214,7 +247,8 @@ export default function Index() {
               Never Miss Important Notes Again
             </h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              Access thousands of verified notes created by top-performing students. Start your journey to better grades today.
+              Access thousands of verified notes created by top-performing
+              students. Start your journey to better grades today.
             </p>
             <Link
               to="/student-type"

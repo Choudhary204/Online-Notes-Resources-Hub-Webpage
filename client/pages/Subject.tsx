@@ -37,7 +37,7 @@ export default function Subject() {
   const handleSelect = (subjectName: string) => {
     setSelectedSubject(subjectName);
     navigate(
-      `/notes-type?type=${studentType}&class=${encodeURIComponent(selectedClass)}&subject=${encodeURIComponent(subjectName)}`
+      `/notes-type?type=${studentType}&class=${encodeURIComponent(selectedClass)}&subject=${encodeURIComponent(subjectName)}`,
     );
   };
 
@@ -61,7 +61,9 @@ export default function Subject() {
               </h1>
               <p className="text-lg text-muted-foreground">
                 Choose from {subjects.length} available subjects for{" "}
-                <span className="font-semibold text-foreground">{selectedClass}</span>
+                <span className="font-semibold text-foreground">
+                  {selectedClass}
+                </span>
               </p>
             </div>
 
@@ -78,7 +80,9 @@ export default function Subject() {
                         : "bg-gradient-to-br from-slate-50 to-slate-100 border-2 border-border hover:border-accent text-foreground"
                     }`}
                   >
-                    <div className="text-3xl md:text-4xl mb-3">{subject.icon}</div>
+                    <div className="text-3xl md:text-4xl mb-3">
+                      {subject.icon}
+                    </div>
                     <div className="font-semibold text-sm md:text-base leading-tight">
                       {subject.name}
                     </div>
@@ -89,8 +93,9 @@ export default function Subject() {
               {/* Breadcrumb */}
               <div className="mt-12 p-6 bg-muted/30 rounded-lg border border-border">
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-semibold">Progress:</span> {studentType === "school" ? "Class" : "Year"}{" "}
-                  {selectedClass} → Subject Selection
+                  <span className="font-semibold">Progress:</span>{" "}
+                  {studentType === "school" ? "Class" : "Year"} {selectedClass}{" "}
+                  → Subject Selection
                 </p>
               </div>
             </div>

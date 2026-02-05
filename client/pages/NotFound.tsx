@@ -19,12 +19,15 @@ const NotFound = () => {
       <Header />
       <main className="flex-1 flex items-center justify-center">
         <div className="container mx-auto px-4 md:px-6 text-center py-24">
-          <h1 className="text-6xl md:text-8xl font-bold text-primary mb-4">404</h1>
+          <h1 className="text-6xl md:text-8xl font-bold text-primary mb-4">
+            404
+          </h1>
           <p className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
             Oops! Page not found
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto">
-            The page you're looking for doesn't exist. Let's get you back on track!
+            The page you're looking for doesn't exist. Let's get you back on
+            track!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

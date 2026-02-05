@@ -13,16 +13,18 @@ export default function Class() {
   const [selectedClass, setSelectedClass] = useState<string | null>(null);
 
   const classes = studentType === "school" ? schoolClasses : collegeYears;
-  const pageTitle = studentType === "school" 
-    ? "Select Your Class"
-    : "Select Your Year";
-  const pageSubtitle = studentType === "school"
-    ? "Choose your current class to access relevant notes"
-    : "Choose your current academic year";
+  const pageTitle =
+    studentType === "school" ? "Select Your Class" : "Select Your Year";
+  const pageSubtitle =
+    studentType === "school"
+      ? "Choose your current class to access relevant notes"
+      : "Choose your current academic year";
 
   const handleSelect = (classValue: string) => {
     setSelectedClass(classValue);
-    navigate(`/subject?type=${studentType}&class=${encodeURIComponent(classValue)}`);
+    navigate(
+      `/subject?type=${studentType}&class=${encodeURIComponent(classValue)}`,
+    );
   };
 
   return (
@@ -43,9 +45,7 @@ export default function Class() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 {pageTitle}
               </h1>
-              <p className="text-lg text-muted-foreground">
-                {pageSubtitle}
-              </p>
+              <p className="text-lg text-muted-foreground">{pageSubtitle}</p>
             </div>
 
             {/* Class Selection Grid */}
